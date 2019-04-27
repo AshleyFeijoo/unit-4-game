@@ -1,0 +1,23 @@
+.container{
+    margin: 0 auto;
+    margin-left:1em!important;
+}
+
+.header{
+    border: orange solid 1px;
+    padding: 1em .5em 1em .5em;
+}
+
+#resultsDoc{
+    border: red solid 1px;
+}
+
+#ranNumDoc{
+    border: red solid 1px;
+}
+
+.border{
+    border: red solid 1px;
+
+}
+
