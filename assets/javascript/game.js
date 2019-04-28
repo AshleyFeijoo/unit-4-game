@@ -1,67 +1,90 @@
-$(document).ready(function() {
-    var wins= 0;
+$(document).ready(function () {
+//=============+++++++++++++++++++================//
+    //Global Variables//
+//=============+++++++++++++++++++================//
+    var wins = 0;
     var losses = 0;
-    var totalScore=0;
-    var crystalNumber;
+    var totalScore = 0;
 
-   //this is a random number chosen
-    function randomCompNum(min, max) {
+    $("#wins").text("Wins: " + wins);
+    $("#losses").text("Losses: " + wins);
+
+
+//=============+++++++++++++++++++================//
+    //Selects main random number score and displays it//
+//=============+++++++++++++++++++================//
+    function randomCrystalNum(min, max) {
         return Math.floor(Math.random() * (max - min) + min);
     }
 
-  //this is a random number between 1-12 for the crystals   
-    function randomBetween(min, max) {
-        return Math.floor(Math.random() * (max - min) + min);
+    var randomCompChoice = randomCrystalNum(19, 120);
+    $("#compChoiceNum").text(randomCompChoice);
+    console.log("Random num Chose: " + randomCompChoice);
+
+//=============+++++++++++++++++++================//
+    //Selects a random value for each crystal//
+//=============+++++++++++++++++++================//
+    var ranValue = [];
+    var currentValue;
+    function generateNum(){
+    while (ranValue.length < 4) {
+      currentValue = Math.floor(Math.random() * 12) + 1;
+      if (ranValue.indexOf(currentValue) < 0) {
+     ranValue.push(currentValue);
+      }
     }
+};
+generateNum(12);
 
-    // var randomCompNum= randomBetween(19,120);
-    // $("#compChoiceNum").text("Random Chosen Number: " + randomCompNum);
+//=============+++++++++++++++++++================//
+    //Reset Function
+//=============+++++++++++++++++++================//
+function resetGame(){
+    totalScore = 0;
+    randomCompChoice = randomCrystalNum(19, 120);
+    $("#compChoiceNum").text(randomCompChoice);
+    console.log("Random num Chose: " + randomCompChoice);
+    $("#total-score").text(totalScore);
+};
 
-    
- 
+//=============+++++++++++++++++++================//
+    //functions for win and lose 
+//=============+++++++++++++++++++================//
+    function youWon(){
+        wins++;
+        alert("You won!");
+        $("#wins").text("Wins: " + wins);
+        resetGame();
+    };
 
-    $(".buttonS").on("click", function() {
-        let number = $(this).val();          
-        crystalNumber = (randomBetween(1, 12));
-        console.log( "The number value for the crystal is: " + crystalNumber)
-        console.log("number is: " + number);
+    function youLost(){
+        losses++;
+        alert("You Lose! Your total score was: " + totalScore);
+        $("#losses").html("Losses: " + losses);
+        resetGame();
+    };
 
-        if (totalScore == 0){
-            randomCompNum= randomBetween(19,120);
-        $("#compChoiceNum").text("Random Chosen Number: " + randomCompNum);
-        }else{}
-        
+//=============+++++++++++++++++++================//
+    //Begins game with click 
+//=============+++++++++++++++++++================//
+    $(".buttonS").on("click", function(){
+        $("#button-1").val(ranValue[0]);
+        $("#button-2").val(ranValue[1]);
+        $("#button-3").val(ranValue[2]);
+        $("#button-4").val(ranValue[3]);
+        var selectedValue = parseInt($(this).val(), 10);
+        console.log(selectedValue);
+        totalScore = totalScore + selectedValue;
+        $("#total-score").text(totalScore);
 
-        if(totalScore < randomCompNum){
-            totalScore = totalScore + crystalNumber;
-            $("#total-score").text("Total Score is: " + totalScore);
-           totalScore = parseInt(totalScore);
-        }else{
-        }if( totalScore === randomCompNum){
-            wins ++;
-            $("#wins").text(wins);
-            totalScore=0;
-        }else{
-
-        }if(totalScore > randomCompNum){
-            losses ++;
-            $("#losses").text(losses);
-            wins= 0;
-            totalScore = 0;
-            console.log("Total Score is: " + totalScore);
-            console.log("randomCompNum = " + randomCompNum);
-            $("#total-score").text("Total Score is: " + totalScore);
-            randomBetween(19,120);
-            $("#compChoiceNum").text("Random Chosen Number: " + randomCompNum);
-            
+        if(totalScore > randomCompChoice){
+            youLost();
+        } else if(totalScore === randomCompChoice){
+            youWon();
 
         }
 
-        
+      });
+    
 
-
-        
-    }); 
-    console.log(totalScore)
-});
-
+}); //function document ready end *****************

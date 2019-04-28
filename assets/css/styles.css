@@ -1,23 +1,53 @@
+body{
+    margin: 0 auto;
+    line-height:1.5;
+    background-image: url("../images/diagmonds.png");
+    background-repeat: repeat;
+    /* background-size: cover; */
+    color:black;
+}
+h1,
+h2 {
+    color:black
+}
+
+p{
+    color:black;
+}
+
 .container{
     margin: 0 auto;
     margin-left:1em!important;
 }
 
 .header{
-    border: orange solid 1px;
+    border: white orange solid 1px;
     padding: 1em .5em 1em .5em;
+    background-color: silver;
 }
 
-#resultsDoc{
-    border: red solid 1px;
+
+.buttonS{
+    background-color: transparent;
+
+    border:none;
 }
+.btn:focus,.btn:active {
+    outline: none !important;
+    box-shadow: none !important;
+ }
+ .crystalImgs{
+     background-color:white;
+     padding:.5em;
+     border-radius:10px;
+ }
 
-#ranNumDoc{
-    border: red solid 1px;
+ .ran-col {
+    background: silver;
+    /* width: 60px!important; */
+    padding: 25px;
+
 }
-
-.border{
-    border: red solid 1px;
-
+.rules-card{
+    width:25rem;
 }
-
