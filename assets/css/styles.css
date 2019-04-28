@@ -1,53 +1,100 @@
-body{
+body {
     margin: 0 auto;
-    line-height:1.5;
-    background-image: url("../images/diagmonds.png");
+    line-height: 1.5;
+    background-image: url("../images/pink_rice.png");
     background-repeat: repeat;
     /* background-size: cover; */
-    color:black;
-}
-h1,
-h2 {
-    color:black
+    color: white !important;
+    font-family: 'Artifika', serif !important;
+    color: #FFFFFF;
+    background: #F7C1C1;
+    text-shadow: -1px 2px 5px rgba(0,0,0,0.52);
+
+
 }
 
-p{
-    color:black;
-}
 
-.container{
+
+.container {
     margin: 0 auto;
-    margin-left:1em!important;
+    /* margin-left:1em!important; */
 }
 
-.header{
+.header {
     border: white orange solid 1px;
     padding: 1em .5em 1em .5em;
     background-color: silver;
 }
 
 
-.buttonS{
+.buttonS {
     background-color: transparent;
-
-    border:none;
+    border: none;
+    padding: 0!important;
 }
-.btn:focus,.btn:active {
+img.crystalImgs {
+    background: transparent;
+    width:80%;
+    padding: 0;
+  
+}
+
+img.crystalImgs:hover{
+
+}
+
+.btn:focus,
+.btn:active {
     outline: none !important;
     box-shadow: none !important;
- }
- .crystalImgs{
-     background-color:white;
-     padding:.5em;
-     border-radius:10px;
- }
+}
 
- .ran-col {
-    background: silver;
-    /* width: 60px!important; */
+.crystalImgs {
+    width:80%
+    border-radius: 10px;
+}
+
+.ran-col {
+
     padding: 25px;
 
 }
-.rules-card{
-    width:25rem;
+
+.rules-card {
+    width: 25rem;
+}
+
+.borderGrey {
+    border: 1px dashed rgb(204, 204, 204);
+
+}
+
+.boxShd {
+    -webkit-box-shadow: 0px 0px 28px 6px #c79090, 0px 0px 10px 11px #eaeaea;
+    -moz-box-shadow: 0px 0px 28px 6px #c79090, 0px 0px 10px 11px #eaeaea;
+    box-shadow: 0px 0px 28px 6px #c79090, 0px 0px 10px 11px #eaeaea;
+}
+
+.boxShd2 {
+    -webkit-box-shadow: 10px 10px 18px -11px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 10px 10px 18px -11px rgba(0, 0, 0, 0.75);
+    box-shadow: 10px 10px 18px -11px rgba(0, 0, 0, 0.75);
+}
+
+#main-content {
+    border-radius: 35px;
+    background-color: white;
+    background-image: url('../images/white_wall_hash.png');
+    background-repeat: repeat;
+}
+
+.pinkBg{
+    background-image: url('../images/pink_rice.png');
+    background-repeat: repeat;
+
+}
+
+.crystals{
+    border: white 2px dashed;
+    padding:.5em;
 }

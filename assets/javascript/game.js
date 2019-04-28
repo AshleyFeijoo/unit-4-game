@@ -1,13 +1,14 @@
 $(document).ready(function () {
 //=============+++++++++++++++++++================//
-    //Global Variables//
+    //Global Variables// and sets initial text
 //=============+++++++++++++++++++================//
     var wins = 0;
     var losses = 0;
     var totalScore = 0;
 
-    $("#wins").text("Wins: " + wins);
-    $("#losses").text("Losses: " + wins);
+    $("#wins").text(wins);
+    $("#losses").text(losses);
+    $("#total-score").text(totalScore);
 
 
 //=============+++++++++++++++++++================//
@@ -19,7 +20,6 @@ $(document).ready(function () {
 
     var randomCompChoice = randomCrystalNum(19, 120);
     $("#compChoiceNum").text(randomCompChoice);
-    console.log("Random num Chose: " + randomCompChoice);
 
 //=============+++++++++++++++++++================//
     //Selects a random value for each crystal//
@@ -43,7 +43,6 @@ function resetGame(){
     totalScore = 0;
     randomCompChoice = randomCrystalNum(19, 120);
     $("#compChoiceNum").text(randomCompChoice);
-    console.log("Random num Chose: " + randomCompChoice);
     $("#total-score").text(totalScore);
 };
 
@@ -53,14 +52,14 @@ function resetGame(){
     function youWon(){
         wins++;
         alert("You won!");
-        $("#wins").text("Wins: " + wins);
+        $("#wins").text(wins);
         resetGame();
     };
 
     function youLost(){
         losses++;
         alert("You Lose! Your total score was: " + totalScore);
-        $("#losses").html("Losses: " + losses);
+        $("#losses").html(losses);
         resetGame();
     };
 
@@ -68,12 +67,12 @@ function resetGame(){
     //Begins game with click 
 //=============+++++++++++++++++++================//
     $(".buttonS").on("click", function(){
+        
         $("#button-1").val(ranValue[0]);
         $("#button-2").val(ranValue[1]);
         $("#button-3").val(ranValue[2]);
         $("#button-4").val(ranValue[3]);
         var selectedValue = parseInt($(this).val(), 10);
-        console.log(selectedValue);
         totalScore = totalScore + selectedValue;
         $("#total-score").text(totalScore);
 
@@ -88,3 +87,5 @@ function resetGame(){
     
 
 }); //function document ready end *****************
+
+
