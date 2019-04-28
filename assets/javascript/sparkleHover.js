@@ -1,5 +1,29 @@
-document
+$(document).ready(function () {
+	$('.demo').sparkleHover({
 
+		// an array of sprite colors
+		colors : ['#FFDBDB', '#E39D9D', '#FFECEC','#D77E7E', '#F7C1C1'],
+	
+		// number of sprites
+		num_sprites: 150,
+	
+		// in milliseconds
+		lifespan: 4000,
+	
+		// spread radius
+		radius: 250,
+	
+		// size of sprites
+		sprite_size: 5,
+	
+		// 'circle', 'square' or 'triangle'
+		shape: 'triangle',
+	
+		// enable gravity
+		gravity: 'true',
+		
+	});
+});
 
 (function($){
   'use strict';

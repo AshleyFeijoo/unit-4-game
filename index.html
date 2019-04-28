@@ -6,39 +6,42 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
+
     <link rel="stylesheet" href="./assets/css/normalize.css">
     <link rel="stylesheet" href="./assets/css/styles.css">
     <link href="https://fonts.googleapis.com/css?family=Artifika" rel="stylesheet">
     <!-- Added link to the jQuery library -->
-    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet"
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
-    <script src="assets/javascript/sparkleHover.js"></script>
+    <!-- <script src="assets/javascript/sparkleHover.js"></script> -->
     <script src="assets/javascript/game.js"></script>
 
 </head>
 
 <body>
-    <div class="container-fluid clearfix ml-5">
-        <div class="row clearfix d-flex text-center">
-            <h3 class="h3 col-auto">
-                <img src="./assets/images/CrystalizeText.png">
-            </h3>
+    <div class="header bg-white"> </div>
+    <div class="container clearfix ml-5 d-flex">
+
+        <div class="row clearfix d-flex text-center justify-content-center ">
+            <div class="h3 col-auto head-img">
+                <img class="demo" src="./assets/images/CrystalizeText.png">
+            </div>
         </div>
         <div id="main-content"
-            class="w-30 pinkBg boxShd borderGrey p-4 d-inline-flex flex-column justify-content-center align-items-center">
+            class="float-left pinkBg boxShd borderGrey p-4 d-inline-flex flex-column justify-content-center align-items-center">
             <div class="row d-flex flex-column justify-content-center rounded mt-5">
                 <h2 class="pl-3 pr-3 pt-4 pb-4 h4 rounded pinkBg borderGrey mb-2">Random Number: </h2>
                 <p class=" borderGrey pinkBg h3 col-auto p-3 rounded h-3 text-center" id="compChoiceNum">19</p>
-<div class="demo">HELLO</div>
 
             </div>
             <div class="row">
-                <div class="crystals col-auto d-inline-flex justify-content-center p-0">
-                    <button id="button-1" class=" btn buttonS btn-sm ">
+                <div class="crystals col-auto d-inline-flex justify-content-center pt-1 pb-1 mt-2 mb-2">
+                    <button id="button-1" class=" btn buttonS ">
                         <img class="crystalImgs"
-                            src="./assets/images/dream_world_like_gem_sprites_by_decatilde_d6st1xx/Dragon Gem.svg"></button>
+                            src="./assets/images/dream_world_like_gem_sprites_by_decatilde_d6st1xx/Poison Gem.svg"></button>
 
                     <button id="button-2" class=" btn buttonS" value="">
                         <img class="crystalImgs"
@@ -46,7 +49,7 @@
                     </button>
                     <button id="button-3" class=" btn buttonS" value="">
                         <img class="crystalImgs"
-                            src="./assets/images/dream_world_like_gem_sprites_by_decatilde_d6st1xx/Poison Gem.svg">
+                            src="./assets/images/dream_world_like_gem_sprites_by_decatilde_d6st1xx/Normal Gem.svg">
                     </button>
                     <button id="button-4" class=" btn buttonS" value="">
                         <img class="crystalImgs"
@@ -62,24 +65,51 @@
                 </div>
 
                 <div class="col-auto align-self-center">
-                        <div class="pinkBg rounded borderGrey text-center pt-2 pb-1 mb-2">
-                            <h3 class="col-auto h5 pinkBg m-0">Wins:</h3>
-                            <p class="col-auto h5 text-center m-0 " id="wins">0</p>
-                        </div>
-                        <div class="pinkBg rounded borderGrey text-center pt-2 pb-2 mb-2 ">
-                            <h3 class="col-auto h5 m-0">Losses:</h3>
-                            <p class="col-auto m-0 h5  text-center" id="losses">0</p>
-                        </div>
+                    <div class="pinkBg rounded borderGrey text-center pt-2 pb-1 mb-2">
+                        <h3 class="col-auto h5 pinkBg m-0">Wins:</h3>
+                        <p class="col-auto h5 text-center m-0 " id="wins">0</p>
+                    </div>
+                    <div class="pinkBg rounded borderGrey text-center pt-2 pb-2 mb-2 ">
+                        <h3 class="col-auto h5 m-0">Losses:</h3>
+                        <p class="col-auto m-0 h5  text-center" id="losses">0</p>
+                    </div>
                 </div>
 
             </div>
 
         </div>
+        <div id="secondContent"
+            class="align-self-center float-right rules-card mx-auto col-md-5 pinkBg boxShd borderGrey p-2 ">
+            <div class="row text-center">
+                <div class="p-2 mx-auto">
+                    <h1 class="rules text-center mx-auto p-2 h3 d-inline-block">Game Rules!</h1>
+                    <div class="col-md-12">
+                        <p>The object of Crystal Collector is to match your score to the random chosen number.
+                        </p>
+                        <p>At the beginning of the game, each crystal is assigned a random number that is
+                            hidden from the player. </p>
+                        <p>The player must click the different crystals to add that number of points to their
+                            score.</p>
+                        <p>If the player matches the random score, the player wins. If the player goes over
+                            the score, the player loses.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
     </div>
 
 
 
-
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+    </script>
 
 </body>
 

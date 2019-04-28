@@ -1,13 +1,12 @@
 body {
     margin: 0 auto;
     line-height: 1.5;
-    background-image: url("../images/pink_rice.png");
+    background-image: url('../images/whitediamond.png')!important;
     background-repeat: repeat;
     /* background-size: cover; */
     color: white !important;
     font-family: 'Artifika', serif !important;
-    color: #FFFFFF;
-    background: #F7C1C1;
+    /* background: #F7C1C1; */
     text-shadow: -1px 2px 5px rgba(0,0,0,0.52);
 
 
@@ -17,13 +16,17 @@ body {
 
 .container {
     margin: 0 auto;
-    /* margin-left:1em!important; */
+    position: relative;
+    background-image: url("../images/pink_rice.png")!important;
+    border-radius:1em;
 }
 
 .header {
     border: white orange solid 1px;
     padding: 1em .5em 1em .5em;
-    background-color: silver;
+    background-image: url('../images/whitediamond.png')!important;
+    background-repeat: repeat;
+    height:50%
 }
 
 
@@ -34,12 +37,17 @@ body {
 }
 img.crystalImgs {
     background: transparent;
-    width:80%;
+  
     padding: 0;
   
 }
 
-img.crystalImgs:hover{
+img.crystalImgs:active{
+    -webkit-filter: drop-shadow(5px 5px 5px #F7C1C1) 
+    drop-shadow(-5px -5px 5px #FFECEC);
+filter:drop-shadow(5px 5px 5px #F7C1C1) 
+drop-shadow(-5px -5px 5px #FFECEC);
+    cursor:pointer;
 
 }
 
@@ -50,7 +58,7 @@ img.crystalImgs:hover{
 }
 
 .crystalImgs {
-    width:80%
+    width:70%;
     border-radius: 10px;
 }
 
@@ -60,19 +68,19 @@ img.crystalImgs:hover{
 
 }
 
-.rules-card {
+/* .rules-card {
     width: 25rem;
-}
+} */
 
 .borderGrey {
-    border: 1px dashed rgb(204, 204, 204);
+    border: 1px dashed rgb(252, 225, 225);
 
 }
 
 .boxShd {
-    -webkit-box-shadow: 0px 0px 28px 6px #c79090, 0px 0px 10px 11px #eaeaea;
-    -moz-box-shadow: 0px 0px 28px 6px #c79090, 0px 0px 10px 11px #eaeaea;
-    box-shadow: 0px 0px 28px 6px #c79090, 0px 0px 10px 11px #eaeaea;
+    -webkit-box-shadow: 0px 0px 28px 6px #FFDBDB, 0px 0px 10px 11px #eaeaea;
+    -moz-box-shadow: 0px 0px 28px 6px #FFDBDB, 0px 0px 10px 11px #eaeaea;
+    box-shadow: 0px 0px 28px 6px #FFDBDB, 0px 0px 10px 11px #eaeaea;
 }
 
 .boxShd2 {
@@ -84,17 +92,57 @@ img.crystalImgs:hover{
 #main-content {
     border-radius: 35px;
     background-color: white;
-    background-image: url('../images/white_wall_hash.png');
+    background-image: url('../images/whitediamond.png')!important;
     background-repeat: repeat;
+    margin-top:6em;
+    margin-left: 3em;
+}
+
+#secondContent{
+    border-radius: 35px;
+    background-color: white;
+    background-image: url('../images/whitediamond.png')!important;
+    background-repeat: repeat;
+    margin-top:6em;
+    margin-right: 3em;
+    font-size:1em;
+    color: #F7C1C1;
+    text-shadow:none;
+
 }
 
 .pinkBg{
-    background-image: url('../images/pink_rice.png');
+    background-image: url('../images/pink_rice.png')!important;
     background-repeat: repeat;
 
 }
 
+.greyBg{
+    background-image: url('../images/pink_rice.png')!important;
+    background-repeat: repeat;
+    
+}
+
+
 .crystals{
-    border: white 2px dashed;
-    padding:.5em;
+    border-top: 1px dashed rgb(252, 225, 225);
+    border-bottom: 1px dashed rgb(252, 225, 225);;
+   
+
+}
+
+.demo{
+    position:absolute;
+    transform: rotate(-10deg);
+    left:-1em;
+    top:2em;
+    z-index:100000;
+}
+
+p{
+    font-size:.8em
+}
+
+.rules{
+    border-bottom: 1px dashed rgb(252, 225, 225);
 }
