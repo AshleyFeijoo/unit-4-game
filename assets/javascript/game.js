@@ -1,4 +1,5 @@
 $(document).ready(function() {
+    $('.toast').toast('show');
   //=============+++++++++++++++++++================//
   //Global Variables// and sets initial text
   //=============+++++++++++++++++++================//
@@ -10,6 +11,8 @@ $(document).ready(function() {
   $("#wins").text(wins);
   $("#losses").text(losses);
   $("#total-score").text(totalScore);
+
+
 
   //=============+++++++++++++++++++================//
   //Selects main random number score and displays it//
@@ -36,6 +39,7 @@ $(document).ready(function() {
     }
   }
   generateNum(12);
+
 
   console.log("the randomcompnum is: " + randomCompChoice);
   //=============+++++++++++++++++++================//
