@@ -58,16 +58,32 @@ function resetGame(){
 
     function youLost(){
         losses++;
-        alert("You Lose! Your total score was: " + totalScore);
+        // alert("You Lose! Your total score was: " + totalScore);
         $("#losses").html(losses);
         resetGame();
     };
+    // =======================++++++++++++++++++
+
+ 
+    
 
 //=============+++++++++++++++++++================//
     //Begins game with click 
 //=============+++++++++++++++++++================//
+    //Sound Variables//
+//=============+++++++++++++++++++================//
+var sound = new Audio("click.wav");
+
+
     $(".buttonS").on("click", function(){
-        
+        audio = new Audio("click.wav");
+        sound.preload = 'auto';
+        // sound.load();
+        function playSound() {
+        var click=sound.cloneNode();
+        click.play();  
+    }
+        playSound();
         $("#button-1").val(ranValue[0]);
         $("#button-2").val(ranValue[1]);
         $("#button-3").val(ranValue[2]);
