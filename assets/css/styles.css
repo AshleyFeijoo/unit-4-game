@@ -32,6 +32,24 @@ background-size: cover;
     border: none;
     padding: 0!important;
 }
+
+.hiddenContent {
+   text-align:center;
+   margin: 0 auto;
+    z-index: 1000000;
+    right:30%;
+    left:30%;
+    bottom:20%;
+    top:20%;
+    padding: 5em!important;
+    border: white 4px dashed!important;
+
+}
+#pop-up{
+    display:none;
+}
+
+
 img.crystalImgs {
     background: transparent;
   
