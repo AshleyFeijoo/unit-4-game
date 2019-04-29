@@ -78,6 +78,7 @@ $(document).ready(function() {
 
   var selectedValue = "";
   $(".buttonS").on("click", function() {
+    $("#begin").hide();
     $("#button-1").val(ranValue[0]);
     $("#button-2").val(ranValue[1]);
     $("#button-3").val(ranValue[2]);
