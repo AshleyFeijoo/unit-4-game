@@ -16,6 +16,6 @@
 
 ***
 
-![WELCOME Image]"<https://i.gyazo.com/5bf36f951a56ced5f7aa3a8a9ecfc77a.jpg">
+![WELCOME Image](https://i.gyazo.com/5bf36f951a56ced5f7aa3a8a9ecfc77a.jpg")
 
 ***
